@@ -1,9 +1,9 @@
 const merge = require('webpack-merge')
 const common = require('./webpack.common.js')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const glob = require('glob')
+// const glob = require('glob')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const PurifyCSSPlugin = require('purifycss-webpack')
+// const PurifyCSSPlugin = require('purifycss-webpack')
 const CompressionPlugin = require('compression-webpack-plugin')
 const WebpackMonitor = require('webpack-monitor')
 const path = require('path')
@@ -42,7 +42,7 @@ module.exports = merge(common, {
                 // alias: {
                 //  'MAIN':'src/App/Containers/Main'
                 // },
-                localIdentName: 'purify_[hash:base64:5]',
+                localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
               },
             },
             'postcss-loader',
@@ -64,18 +64,18 @@ module.exports = merge(common, {
       disable: false,
       allChunks: true,
     }),
-    new PurifyCSSPlugin({
-      // Give paths to parse for rules. These should be absolute!
-      paths: glob.sync(path.join(__dirname, 'build/*.html')),
-      purifyOptions: {
-        whitelist: ['*purify*'],
-      },
-    }),
+    // new PurifyCSSPlugin({
+    //   // Give paths to parse for rules. These should be absolute!
+    //   paths: glob.sync(path.join(__dirname, 'build/*.html')),
+    //   purifyOptions: {
+    //     whitelist: ['*purify*'],
+    //   },
+    // }),
     new CompressionPlugin(),
     new WebpackMonitor({
       capture: true, // -> default 'true'
       target: '../reports/build-report.json', // default -> '../monitor/stats.json'
-      launch: true, // -> default 'false'
+      launch: false, // -> default 'false'
       port: 3030, // default -> 8081
     }),
   ],

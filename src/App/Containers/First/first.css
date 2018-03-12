@@ -1,11 +1,15 @@
 $yellow: #fc0;
 
-.tg {
-  .tt {
+:global(body) {
+  background: #f8f8f8;
+}
+
+.root {
+  .title {
     font-size: 4rem;
   }
 }
 
-h1 {
+/*h1 {
   background: $yellow;
-}
+}*/

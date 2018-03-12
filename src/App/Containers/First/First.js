@@ -37,18 +37,25 @@ export default class Main extends Component {
 
   render() {
     return (
-      <div styleName="tg">
-        <h1 styleName="tt">{this.props.counter}</h1>
-        <button onClick={this.onInc}>{'+'}</button>
-        <button onClick={this.onDec}>{'-'}</button>
-        <button onClick={this.onFetch}>{'test saga fetch'}</button>
-        <button onClick={this.onNotFound}>{'Go to NotFound'}</button>
+      <div styleName="root">
+        <div styleName="title">{'Webb Lu'}</div>
+        <div>{'A frontend developer @ taipei'}</div>
+        <div>{'To Be Done.'}</div>
       </div>
     )
+    // return (
+    //   <div styleName="root">
+    //     <h1 styleName="title">{this.props.counter}</h1>
+    //     <button onClick={this.onInc}>{'+'}</button>
+    //     <button onClick={this.onDec}>{'-'}</button>
+    //     <button onClick={this.onFetch}>{'test saga fetch'}</button>
+    //     <button onClick={this.onNotFound}>{'Go to NotFound'}</button>
+    //   </div>
+    // )
   }
 }
 
 Main.propTypes = {
   actions: PropTypes.object,
-  counter: PropTypes.number,
+  // counter: PropTypes.number,
 }

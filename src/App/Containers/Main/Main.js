@@ -13,9 +13,6 @@ const Main = () => (
     <ConnectedRouter history={history}>
       <Router>
         <div>
-          <Link to="/">{'Home'}</Link>
-          <Link to="/Second">{'Second'}</Link>
-          <hr />
           <Switch>
             <Route exact path="/" component={First} />
             <Route path="/Second" component={Second} />
