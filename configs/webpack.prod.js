@@ -53,10 +53,17 @@ module.exports = merge(common, {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      path: PUBLIC_FOLDER_PATH,
-      filename: 'index.html',
+      filename: '../index.html',
       favicon: 'assets/favicon.ico',
       inject: 'body', // auto inject the bundle files
+      minify: {
+        removeAttributeQuotes: true,
+        collapseWhitespace: true,
+        html5: true,
+        minifyCSS: true,
+        removeComments: true,
+        removeEmptyAttributes: true,
+      },
       template: path.resolve('template.html'),
     }),
     new ExtractTextPlugin({
