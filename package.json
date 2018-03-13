@@ -18,7 +18,8 @@
     "dev": "node dev-server.js",
     "build": "webpack --config configs/webpack.prod.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "test": "echo testing TBD"
   },
   "homepage": "gogoge.github.io",
   "devDependencies": {
