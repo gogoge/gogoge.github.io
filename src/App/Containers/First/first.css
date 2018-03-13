@@ -5,11 +5,18 @@ $yellow: #fc0;
 }
 
 .root {
-  .title {
-    font-size: 4rem;
-  }
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
 }
-
+.title {
+  font-size: 4rem;
+  font-family: 'Fredericka the Great', cursive;
+}
+.content {
+  font-family: 'Josefin Slab', serif;
+}
 /*h1 {
   background: $yellow;
 }*/

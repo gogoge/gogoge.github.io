@@ -39,8 +39,8 @@ export default class Main extends Component {
     return (
       <div styleName="root">
         <div styleName="title">{'Webb Lu'}</div>
-        <div>{'A frontend developer @ taipei'}</div>
-        <div>{'To Be Done.'}</div>
+        <div styleName="content">{'A frontend developer @ taipei'}</div>
+        <div styleName="content">{'To Be Done.'}</div>
       </div>
     )
     // return (
